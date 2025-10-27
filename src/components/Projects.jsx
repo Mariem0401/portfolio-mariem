@@ -8,7 +8,7 @@ export default function Projects() {
       description:
         "Full MERN web app for pet adoption with smart matching, user authentication, and admin dashboard.",
       technologies: ["MongoDB", "Express", "React", "Node.js", "JWT"],
-      image: "public/image/adopti.png",
+      image: "/image/adopti.png",
       github: "https://github.com/Mariem0401/pfaProject",
       demo: "https://adoptipet-demo.vercel.app",
       gradient: "from-emerald-500 to-teal-600",
@@ -18,7 +18,7 @@ export default function Projects() {
       description:
         "AI system for detecting tomato leaf diseases using deep learning and computer vision.",
       technologies: ["Python", "TensorFlow", "OpenCV"],
-      image: "public/image/farm.png",
+      image: "image/farm.png",
       github: "https://github.com/Mariem0401/Projet_integration",
       demo: "#",
       gradient: "from-red-500 to-orange-600",
@@ -29,7 +29,7 @@ export default function Projects() {
     description:
       "Industrial production monitoring system using RFID tags and Raspberry Pi for real-time tracking of manufacturing operations.",
     technologies: ["Angular", "Spring Boot", "Raspberry Pi", "RFID", "MySQL"],
-   image: "public/image/ac.png",
+   image: "image/ac.png",
     github: "https://github.com/mariam/rfid-production-tracking",
     demo: "#",
     gradient: "from-yellow-500 to-orange-600",
@@ -41,7 +41,7 @@ export default function Projects() {
     description:
       "Web-based HR management platform that automates employee attendance, leave requests, and salary calculations in real-time.",
     technologies: ["React", "Node.js", "MongoDB", "Express", "Chart.js"],
-    image: "public/image/pointi.png",
+    image: "image/pointi.png",
     github: "https://github.com/Mariem0401/Pointi",
     demo: "#",
     gradient: "from-indigo-500 to-blue-600",
