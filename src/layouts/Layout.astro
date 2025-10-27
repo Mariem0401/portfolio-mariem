@@ -1,0 +1,167 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+}
+
+const { title = 'Mariem Guibene - Ingénieure Développeuse' } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Portfolio de Mariem Guibene - Ingénieure en Génie Logiciel spécialisée en développement web et mobile" />
+    <link rel="icon" type="image/svg+xml" href="/mariem-logo.svg" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-gray-900 text-gray-100 relative overflow-x-hidden">
+    <!-- Animated Stars Background -->
+    <div class="stars-container fixed inset-0 pointer-events-none overflow-hidden">
+      <div class="stars"></div>
+      <div class="stars2"></div>
+      <div class="stars3"></div>
+    </div>
+
+    <!-- Gradient Orbs -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden">
+      <div class="gradient-orb gradient-orb-1"></div>
+      <div class="gradient-orb gradient-orb-2"></div>
+      <div class="gradient-orb gradient-orb-3"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10">
+      <slot />
+    </div>
+
+    <style>
+      /* Stars Animation */
+      .stars-container {
+        z-index: 0;
+      }
+
+      .stars, .stars2, .stars3 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-repeat: repeat;
+      }
+
+      .stars {
+        background-image: 
+          radial-gradient(2px 2px at 20px 30px, #eee, transparent),
+          radial-gradient(2px 2px at 60px 70px, #fff, transparent),
+          radial-gradient(1px 1px at 50px 50px, #ddd, transparent),
+          radial-gradient(1px 1px at 130px 80px, #fff, transparent),
+          radial-gradient(2px 2px at 90px 10px, #eee, transparent);
+        background-size: 200px 200px;
+        animation: stars-move 50s linear infinite;
+      }
+
+      .stars2 {
+        background-image: 
+          radial-gradient(1px 1px at 40px 60px, #fff, transparent),
+          radial-gradient(1px 1px at 110px 90px, #eee, transparent),
+          radial-gradient(2px 2px at 170px 120px, #fff, transparent),
+          radial-gradient(1px 1px at 180px 40px, #ddd, transparent);
+        background-size: 250px 250px;
+        animation: stars-move 100s linear infinite;
+      }
+
+      .stars3 {
+        background-image: 
+          radial-gradient(1px 1px at 75px 100px, #fff, transparent),
+          radial-gradient(2px 2px at 150px 150px, #eee, transparent),
+          radial-gradient(1px 1px at 220px 200px, #fff, transparent);
+        background-size: 300px 300px;
+        animation: stars-move 150s linear infinite;
+        opacity: 0.5;
+      }
+
+      @keyframes stars-move {
+        from {
+          transform: translateY(0);
+        }
+        to {
+          transform: translateY(-1000px);
+        }
+      }
+
+      /* Gradient Orbs */
+      .gradient-orb {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(80px);
+        opacity: 0.3;
+        animation: float 20s ease-in-out infinite;
+      }
+
+      .gradient-orb-1 {
+        width: 500px;
+        height: 500px;
+        background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+        top: -250px;
+        left: -250px;
+        animation-delay: 0s;
+      }
+
+      .gradient-orb-2 {
+        width: 400px;
+        height: 400px;
+        background: linear-gradient(135deg, #ec4899, #f59e0b);
+        top: 50%;
+        right: -200px;
+        animation-delay: -7s;
+      }
+
+      .gradient-orb-3 {
+        width: 600px;
+        height: 600px;
+        background: linear-gradient(225deg, #10b981, #3b82f6);
+        bottom: -300px;
+        left: 50%;
+        animation-delay: -14s;
+      }
+
+      @keyframes float {
+        0%, 100% {
+          transform: translate(0, 0) scale(1);
+        }
+        33% {
+          transform: translate(30px, -50px) scale(1.1);
+        }
+        66% {
+          transform: translate(-20px, 20px) scale(0.9);
+        }
+      }
+
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Fade in animation for content */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      body > div:last-child {
+        animation: fadeIn 0.8s ease-out;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient principal -->
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Gradient pour l'effet glow -->
+    <radialGradient id="glowGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0" />
+    </radialGradient>
+    
+    <!-- Filtre de lueur -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Cercle de fond avec effet glow -->
+  <circle cx="100" cy="100" r="90" fill="url(#glowGradient)" opacity="0.4"/>
+  
+  <!-- Cercle principal -->
+  <circle cx="100" cy="100" r="85" fill="none" stroke="url(#mainGradient)" stroke-width="3" opacity="0.3"/>
+  
+  <!-- Forme géométrique abstraite (représente M) -->
+  <g filter="url(#glow)">
+    <!-- Lettre M stylisée avec formes géométriques -->
+    <path d="M 60 120 L 60 70 L 80 90 L 100 65 L 120 90 L 140 70 L 140 120" 
+          fill="none" 
+          stroke="url(#mainGradient)" 
+          stroke-width="6" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+    
+    <!-- Points de connexion décoratifs -->
+    <circle cx="60" cy="70" r="5" fill="url(#mainGradient)"/>
+    <circle cx="100" cy="65" r="6" fill="url(#mainGradient)"/>
+    <circle cx="140" cy="70" r="5" fill="url(#mainGradient)"/>
+    
+    <!-- Élément décoratif - ligne de code -->
+    <rect x="65" y="135" width="70" height="3" rx="1.5" fill="url(#mainGradient)" opacity="0.6"/>
+    <rect x="75" y="142" width="50" height="3" rx="1.5" fill="url(#mainGradient)" opacity="0.4"/>
+  </g>
+  
+  <!-- Particules décoratives -->
+  <circle cx="45" cy="50" r="2" fill="#06b6d4" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="155" cy="55" r="2.5" fill="#3b82f6" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="150" cy="145" r="2" fill="#8b5cf6" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="50" cy="150" r="2.5" fill="#06b6d4" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2.2s" repeatCount="indefinite"/>
+  </circle>
+</svg>
