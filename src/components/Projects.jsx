@@ -18,34 +18,41 @@ export default function Projects() {
       description:
         "AI system for detecting tomato leaf diseases using deep learning and computer vision.",
       technologies: ["Python", "TensorFlow", "OpenCV"],
-      image: "image/farm.png",
+      image: "/image/farm.png",
       github: "https://github.com/Mariem0401/Projet_integration",
-      demo: "#",
+      demo: "",
       gradient: "from-red-500 to-orange-600",
     },
-   
-     {
-    title: "Real-time Production Tracking",
-    description:
-      "Industrial production monitoring system using RFID tags and Raspberry Pi for real-time tracking of manufacturing operations.",
-    technologies: ["Angular", "Spring Boot", "Raspberry Pi", "RFID", "MySQL"],
-   image: "image/ac.png",
-    github: "https://github.com/mariam/rfid-production-tracking",
-    demo: "#",
-    gradient: "from-yellow-500 to-orange-600",
-  },
-
-  // ✅ NEW PROJECT 2 — Pointi RH System
-  {
-    title: "Pointi HR Management System",
-    description:
-      "Web-based HR management platform that automates employee attendance, leave requests, and salary calculations in real-time.",
-    technologies: ["React", "Node.js", "MongoDB", "Express", "Chart.js"],
-    image: "image/pointi.png",
-    github: "https://github.com/Mariem0401/Pointi",
-    demo: "#",
-    gradient: "from-indigo-500 to-blue-600",
-  },
+    {
+      title: "Real-time Production Tracking",
+      description:
+        "Industrial production monitoring system using RFID tags and Raspberry Pi for real-time tracking of manufacturing operations.",
+      technologies: ["Angular", "Spring Boot", "Raspberry Pi", "RFID", "MySQL"],
+      image: "/image/ac.png",
+      github: "https://github.com/mariam/rfid-production-tracking",
+      demo: "",
+      gradient: "from-yellow-500 to-orange-600",
+    },
+    {
+      title: "Pointi HR Management System",
+      description:
+        "Web-based HR management platform that automates employee attendance, leave requests, and salary calculations in real-time.",
+      technologies: ["React", "Node.js", "MongoDB", "Express", "Chart.js"],
+      image: "/image/pointi.png",
+      github: "https://github.com/Mariem0401/Pointi",
+      demo: "",
+      gradient: "from-indigo-500 to-blue-600",
+    },
+    {
+      title: "Greenly",
+      description:
+        "A mobile app built with Flutter and Firebase that helps users maintain their plants intelligently. It combines real-time weather data, plant type, and location to optimize watering reminders and deliver care tips tailored to local environmental conditions.",
+      technologies: ["Flutter", "Firebase"],
+      image: "/image/greenly.jpg",
+      github: "https://github.com/Mariem0401/Greenly",
+      demo: "",
+      gradient: "from-green-500 to-emerald-600",
+    },
   ];
 
   return (
