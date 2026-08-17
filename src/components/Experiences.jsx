@@ -3,23 +3,33 @@ import { Briefcase, MapPin, Calendar, GraduationCap } from "lucide-react";
 export default function Experiences() {
   const experiences = [
     {
+      title: "Web & Mobile Developer Intern",
+      company: "IWARE",
+      period: "February 2026 - June 2026",
+      location: "Sousse, Tunisia",
+      description:
+        "Designed and developed a loyalty management platform for companies, partner stores and promotional offers. Implemented microservices architecture with Spring Boot, Eureka Discovery Server and OpenFeign. Developed web and mobile applications using React, React Native and Spring Boot.",
+      technologies: ["React", "React Native", "Spring Boot", "Microservices", "Eureka", "OpenFeign", "MySQL", "Docker", "CI/CD"],
+      type: "Internship",
+    },
+    {
       title: "Web Development Intern",
       company: "GPRO Consulting",
       period: "July 2025 - August 2025",
       location: "Sousse, Tunisia",
       description:
-        "Designed and developed an HR management system with user authentication, role management, and an analytical dashboard.",
-      technologies: ["Node.js", "React", "MongoDB"],
+        "Developed a Human Resources management system. Implemented frontend interfaces using React and backend services using Node.js. Managed application data using MongoDB.",
+      technologies: ["React", "Node.js", "MongoDB"],
       type: "Internship",
     },
     {
-      title: "Final Year Project – IoT Development",
+      title: "IoT Final Year Project Intern",
       company: "GPRO Consulting",
-      period: "January 2023 - June 2023",
+      period: "February 2023 - June 2023",
       location: "Sousse, Tunisia",
       description:
-        "Developed a real-time production tracking application using RFID technology and Raspberry Pi sensors for industrial monitoring.",
-      technologies: ["Angular", "Spring Boot", "Raspberry Pi", "RFID"],
+        "Developed a real-time production monitoring system using RFID technology. Built backend services with Spring Boot and frontend interfaces with Angular. Integrated Raspberry Pi devices for data acquisition.",
+      technologies: ["Angular", "Spring Boot", "Raspberry Pi", "RFID", "MySQL"],
       type: "PFE (Graduation Project)",
     },
     {
@@ -28,7 +38,7 @@ export default function Experiences() {
       period: "July 2022",
       location: "Sousse, Tunisia",
       description:
-        "Assisted with IT support and maintenance. Managed tickets, troubleshot hardware and software issues, and ensured network reliability.",
+        "Provided technical support and computer maintenance. Assisted with hardware configuration and network troubleshooting.",
       technologies: ["Technical Support", "IT Maintenance", "Networking"],
       type: "Internship",
     },
@@ -36,20 +46,20 @@ export default function Experiences() {
 
   const education = [
     {
-      degree: "Engineering Cycle in Software Engineering",
+      degree: "Engineering Degree in Software Engineering",
       school: "EPI Digital School",
-      period: "2023 - Present",
+      period: "2023 - 2026",
       location: "Sousse, Tunisia",
       description:
         "Specializing in web and mobile development, software architecture, and distributed systems.",
     },
     {
-      degree: "Bachelor’s Degree in Computer Systems Engineering",
+      degree: "Bachelor's Degree in Computer Systems Engineering",
       school: "ISITCOM",
       period: "2020 - 2023",
       location: "Sousse, Tunisia",
       description:
-        "Specialized in IoT and embedded systems. Final project focused on RFID-based production tracking.",
+        "Specialization: IoT and Embedded Systems. Final project focused on RFID-based production tracking.",
     },
   ];
 

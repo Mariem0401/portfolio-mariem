@@ -1,4 +1,17 @@
-import { Code2, Database, Smartphone, Server, Award, Briefcase, GraduationCap, Download, Mail, Github, Linkedin } from "lucide-react";
+import {
+  Code2,
+  Database,
+  Smartphone,
+  Server,
+  Award,
+  Briefcase,
+  GraduationCap,
+  Download,
+  Mail,
+  Github,
+  Linkedin,
+  Cpu,
+} from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
@@ -6,7 +19,7 @@ export default function About() {
   const sectionRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start end", "end start"]
+    offset: ["start end", "end start"],
   });
 
   const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
@@ -16,14 +29,30 @@ export default function About() {
     {
       icon: <Code2 size={24} />,
       title: "Frontend Dev",
-      techs: ["React", "Angular", "TypeScript", "Tailwind", "Astro"],
+      techs: [
+        "React",
+        "React Native",
+        "Angular",
+        "Flutter",
+        "TypeScript",
+        "TailwindCSS",
+        "Bootstrap",
+      ],
       color: "cyan",
       gradient: "from-cyan-400 to-blue-500",
     },
     {
       icon: <Server size={24} />,
       title: "Backend Dev",
-      techs: ["Node.js", "Express", "Spring Boot", "REST APIs"],
+      techs: [
+        "Spring Boot",
+        "Node.js",
+        "Express",
+        "REST APIs",
+        "Microservices",
+        "Eureka",
+        "OpenFeign",
+      ],
       color: "purple",
       gradient: "from-purple-400 to-pink-500",
     },
@@ -36,23 +65,55 @@ export default function About() {
     },
     {
       icon: <Smartphone size={24} />,
-      title: "Mobile & IoT",
-      techs: ["React Native", "Raspberry Pi", "RFID"],
+      title: "DevOps & Tools",
+      techs: [
+        "Docker",
+        "Git",
+        "GitLab CI/CD",
+        "Nginx",
+        "Postman",
+        "Swagger",
+        "Selenium",
+      ],
       color: "orange",
       gradient: "from-orange-400 to-red-500",
+    },
+    {
+      icon: <Award size={24} />,
+      title: "AI & Data",
+      techs: ["TensorFlow", "Machine Learning", "Image Processing", "Python"],
+      color: "pink",
+      gradient: "from-pink-400 to-rose-500",
+    },
+    {
+      icon: <Cpu size={24} />,
+      title: "IoT & Hardware",
+      techs: ["Arduino", "Raspberry Pi", "Sensors", "RFID"],
+      color: "yellow",
+      gradient: "from-yellow-400 to-amber-500",
     },
   ];
 
   return (
-    <section ref={sectionRef} id="about" className="relative min-h-screen py-20 px-4 sm:px-6 lg:px-8  overflow-hidden">
+    <section
+      ref={sectionRef}
+      id="about"
+      className="relative min-h-screen py-20 px-4 sm:px-6 lg:px-8  overflow-hidden"
+    >
       {/* Animated Grid Background */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f2937_1px,transparent_1px),linear-gradient(to_bottom,#1f2937_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-20"></div>
-      
+
       {/* Glowing Orbs */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-[128px] animate-pulse"></div>
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-[128px] animate-pulse" style={{ animationDelay: '2s' }}></div>
+      <div
+        className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-[128px] animate-pulse"
+        style={{ animationDelay: "2s" }}
+      ></div>
 
-      <motion.div style={{ opacity, scale }} className="max-w-7xl mx-auto relative z-10">
+      <motion.div
+        style={{ opacity, scale }}
+        className="max-w-7xl mx-auto relative z-10"
+      >
         {/* Section Header */}
         <div className="text-center mb-16">
           <motion.div
@@ -100,34 +161,55 @@ export default function About() {
               </div>
 
               <div className="text-center space-y-2 mb-6">
-                <h3 className="text-2xl font-bold text-white">Mariem Guibene</h3>
+                <h3 className="text-2xl font-bold text-white">
+                  Mariem Guibene
+                </h3>
                 <p className="text-cyan-400 font-medium">Software Engineer</p>
                 <p className="text-gray-400 text-sm">📍 Sousse, Tunisia</p>
+                <p className="text-gray-400 text-sm">📧 mariemguib@gmail.com</p>
+                <p className="text-gray-400 text-sm">📱 +216 96 201 966</p>
               </div>
 
               {/* Stats */}
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="bg-gray-800/50 rounded-2xl p-4 text-center border border-gray-700/30">
-                  <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">5+</div>
+                  <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+                    7+
+                  </div>
                   <div className="text-xs text-gray-400 mt-1">Projects</div>
                 </div>
+
                 <div className="bg-gray-800/50 rounded-2xl p-4 text-center border border-gray-700/30">
-                  <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">3</div>
-                  <div className="text-xs text-gray-400 mt-1">Internships</div>
+                  <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
+                    Full Stack
+                  </div>
+                  <div className="text-xs text-gray-400 mt-1">Developer</div>
                 </div>
               </div>
 
               {/* Tags */}
-              <div className="flex flex-wrap gap-2 justify-center">
-                {["Full Stack", "IoT", "Mobile"].map((tag, i) => (
-                  <span
-                    key={i}
-                    className="px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 rounded-full text-xs font-medium"
-                  >
-                    {tag}
-                  </span>
-                ))}
+              <div className="flex flex-wrap gap-2 justify-center mb-6">
+                {["Full Stack", "IoT", "Mobile", "Microservices", "AI/ML"].map(
+                  (tag, i) => (
+                    <span
+                      key={i}
+                      className="px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 rounded-full text-xs font-medium"
+                    >
+                      {tag}
+                    </span>
+                  ),
+                )}
               </div>
+
+              {/* Download Resume Button */}
+              <a
+                href="/resume/Mariem_Guibene_Resume.pdf"
+                download
+                className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-medium hover:shadow-lg hover:shadow-cyan-500/30 transition-all duration-300"
+              >
+                <Download size={18} />
+                Download Resume
+              </a>
             </div>
           </motion.div>
 
@@ -146,13 +228,15 @@ export default function About() {
                   <GraduationCap size={24} className="text-white" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-bold text-white mb-2">Education</h3>
+                  <h3 className="text-xl font-bold text-white mb-2">
+                    Education
+                  </h3>
                   <p className="text-gray-300 leading-relaxed">
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 font-semibold">
-                       Engineering Degree in Software Engineering
+                      Engineering Degree in Software Engineering
                     </span>
                     <br />
-                    EPI Digital School, Sousse • 2023 - Present
+                    EPI Digital School, Sousse • 2023 - 2026
                   </p>
                 </div>
               </div>
@@ -171,9 +255,16 @@ export default function About() {
                   <Briefcase size={24} className="text-white" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-bold text-white mb-2">Experience</h3>
+                  <h3 className="text-xl font-bold text-white mb-2">
+                    Experience
+                  </h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Built IoT tracking systems with RFID & Raspberry Pi, developed HR management platforms with automated payroll, and created various web applications using modern tech stacks.
+                    Built full-stack applications across web, mobile, IoT and AI
+                    domains. Experienced in developing scalable applications
+                    with Angular, React, Spring Boot, Docker and microservices
+                    architecture. Currently working on a modular social-commerce
+                    platform designed to help merchants transition from social
+                    selling to structured online businesses.
                   </p>
                 </div>
               </div>
@@ -192,13 +283,16 @@ export default function About() {
                   <Award size={24} className="text-white" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-bold text-white mb-2">Current Goal</h3>
+                  <h3 className="text-xl font-bold text-white mb-2">
+                    Current Goal
+                  </h3>
                   <p className="text-gray-300 leading-relaxed">
                     Seeking a{" "}
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500 font-semibold">
-                      final-year internship
+                      Software Engineer / Full-Stack Developer
                     </span>{" "}
-                    to work on innovative projects, grow technical skills, and contribute to a professional dev team.
+                    opportunity where I can build scalable applications, solve
+                    real-world problems, and continue growing as an engineer.
                   </p>
                 </div>
               </div>
@@ -215,9 +309,12 @@ export default function About() {
           className="mb-8"
         >
           <h3 className="text-3xl font-bold text-white text-center mb-8">
-            Technical <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Arsenal</span>
+            Technical{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+              Arsenal
+            </span>
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {skills.map((skill, index) => (
               <motion.div
                 key={index}
@@ -229,22 +326,28 @@ export default function About() {
                 className="group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-6 hover:border-gray-600 transition-all duration-500 overflow-hidden"
               >
                 {/* Hover Gradient Effect */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${skill.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
-                
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${skill.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
+                ></div>
+
                 <div className="relative">
-                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${skill.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <div className="text-white">
-                      {skill.icon}
-                    </div>
+                  <div
+                    className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${skill.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
+                  >
+                    <div className="text-white">{skill.icon}</div>
                   </div>
-                  <h4 className="text-lg font-bold text-white mb-3">{skill.title}</h4>
+                  <h4 className="text-lg font-bold text-white mb-3">
+                    {skill.title}
+                  </h4>
                   <div className="space-y-2">
                     {skill.techs.map((tech, i) => (
                       <div
                         key={i}
                         className="flex items-center gap-2 text-sm text-gray-400 group-hover:text-gray-300 transition-colors"
                       >
-                        <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${skill.gradient}`}></div>
+                        <div
+                          className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${skill.gradient}`}
+                        ></div>
                         {tech}
                       </div>
                     ))}
@@ -264,16 +367,49 @@ export default function About() {
           className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 text-center"
         >
           <p className="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
-            I'm a passionate{" "}
+            I'm a{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 font-semibold">
               Software Engineer
             </span>{" "}
-            who loves crafting impactful digital experiences through clean code, creative design, and emerging technologies like{" "}
+            focused on building reliable and scalable digital products. My
+            experience spans{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 font-semibold">
-              IoT & AI
+              full-stack web development, mobile applications, microservices, AI
+              and IoT
             </span>
-            . Let's build something amazing together! 🚀
+            . I enjoy turning real-world problems into practical software
+            solutions through clean architecture, modern technologies and
+            thoughtful user experiences.
           </p>
+        </motion.div>
+
+        {/* Languages */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-8 bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8"
+        >
+          <h3 className="text-2xl font-bold text-white text-center mb-6">
+            Languages
+          </h3>
+          <div className="flex flex-wrap justify-center gap-4">
+            {[
+              { name: "French", level: "Fluent", flag: "🇫🇷" },
+              { name: "English", level: "Intermediate", flag: "🇬🇧" },
+              { name: "Arabic", level: "Native", flag: "🇹🇳" },
+            ].map((lang, i) => (
+              <div
+                key={i}
+                className="px-6 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-center hover:border-cyan-500/50 transition-all duration-300"
+              >
+                <div className="text-2xl mb-1">{lang.flag}</div>
+                <div className="text-white font-medium">{lang.name}</div>
+                <div className="text-cyan-400 text-sm">{lang.level}</div>
+              </div>
+            ))}
+          </div>
         </motion.div>
       </motion.div>
     </section>

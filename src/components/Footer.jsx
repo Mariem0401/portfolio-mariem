@@ -59,14 +59,18 @@ export default function Footer() {
           <h2 className="text-xl font-semibold text-white mb-3">Socials</h2>
           <div className="flex justify-center md:justify-start space-x-4">
             <a
-              href="https://github.com/"
+              href="https://github.com/Mariem0401"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="GitHub"
               className="p-2 rounded-full bg-gray-800/40 hover:bg-cyan-500/20 hover:scale-110 transition-all"
             >
               <Github className="text-gray-300 hover:text-white" size={22} />
             </a>
             <a
-              href="https://linkedin.com/"
+              href="https://www.linkedin.com/in/mariem-guibene-8b039123a/"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="LinkedIn"
               className="p-2 rounded-full bg-gray-800/40 hover:bg-cyan-500/20 hover:scale-110 transition-all"
             >

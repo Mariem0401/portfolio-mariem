@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Github, Phone, MapPin, Send, MessageCircle } from 'lucide-react';
+import { Mail, Linkedin, Github, Phone, MapPin, Send, MessageCircle, Download } from 'lucide-react';
 
 export default function Contact() {
   const contactInfo = [
@@ -29,7 +29,8 @@ export default function Contact() {
     {
       icon: <Linkedin size={24} />,
       label: "LinkedIn",
-      link: "https://www.linkedin.com/in/mariem-guibene-8b039123a/#",
+      link: "https://www.linkedin.com/in/mariem-guibene-8b039123a/",
+      target: "_blank",
       color: "from-blue-600 to-blue-400",
       hoverColor: "hover:border-blue-500"
     },
@@ -37,6 +38,7 @@ export default function Contact() {
       icon: <Github size={24} />,
       label: "GitHub",
       link: "https://github.com/Mariem0401",
+      target: "_blank",
       color: "from-gray-600 to-gray-400",
       hoverColor: "hover:border-gray-500"
     },
@@ -44,6 +46,7 @@ export default function Contact() {
       icon: <Mail size={24} />,
       label: "Email",
       link: "mailto:mariemguib@gmail.com",
+      target: undefined,
       color: "from-cyan-600 to-cyan-400",
       hoverColor: "hover:border-cyan-500"
     }
@@ -121,11 +124,21 @@ export default function Contact() {
               Send a Message
             </a>
             <a 
-              href="#"
+              href="https://www.linkedin.com/in/mariem-guibene-8b039123a/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-gray-800 border border-gray-700 text-gray-300 rounded-xl font-semibold hover:border-cyan-500 hover:text-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300"
             >
               <Linkedin size={20} />
               View LinkedIn Profile
+            </a>
+            <a
+              href="/resume/Mariem_Guibene_Resume.pdf"
+              download
+              className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-gray-800 border border-gray-700 text-gray-300 rounded-xl font-semibold hover:border-cyan-500 hover:text-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300"
+            >
+              <Download size={20} />
+              Download Resume
             </a>
           </div>
         </div>
@@ -138,6 +151,8 @@ export default function Contact() {
               <a 
                 key={index}
                 href={social.link}
+                target={social.target}
+                rel={social.target ? 'noopener noreferrer' : undefined}
                 className={`group relative p-5 bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-2xl ${social.hoverColor} transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-lg`}
                 aria-label={social.label}
               >
