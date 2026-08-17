@@ -108,13 +108,13 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-20">
-      <div className="max-w-7xl mx-auto px-4">
+    <section id="projects" className="py-16 sm:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section Title */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-3">My Projects</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-3">My Projects</h2>
+          <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base">
             A selection of projects showcasing my experience in full-stack
             development, mobile applications, AI, microservices and scalable
             software architecture.
@@ -122,7 +122,7 @@ export default function Projects() {
         </div>
 
         {/* Project Cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -131,7 +131,7 @@ export default function Projects() {
               className="group relative bg-gray-800 rounded-2xl overflow-hidden shadow-lg border border-gray-700 hover:border-cyan-500 transition-all"
             >
               {/* Image/Video */}
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-40 sm:h-48 overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -140,16 +140,16 @@ export default function Projects() {
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
                   <button
                     onClick={() => setSelectedVideo(project.video)}
-                    className="p-4 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all transform hover:scale-110"
+                    className="p-3 sm:p-4 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all transform hover:scale-110"
                   >
-                    <Play size={24} className="text-white" />
+                    <Play size={20} sm:size={24} className="text-white" />
                   </button>
                 </div>
               </div>
 
               {/* Content */}
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 flex justify-between items-center">
+              <div className="p-4 sm:p-6">
+                <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 flex justify-between items-start">
                   {project.title}
                   <div className="flex gap-2">
                     {project.github && (
@@ -159,7 +159,7 @@ export default function Projects() {
                         rel="noopener noreferrer"
                         className="p-2 bg-gray-900 rounded-lg hover:text-cyan-400 transition"
                       >
-                        <Github size={16} />
+                        <Github size={14} sm:size={16} />
                       </a>
                     )}
                     {project.demo && (
@@ -169,19 +169,19 @@ export default function Projects() {
                         rel="noopener noreferrer"
                         className="p-2 bg-gray-900 rounded-lg hover:text-cyan-400 transition"
                       >
-                        <ExternalLink size={16} />
+                        <ExternalLink size={14} sm:size={16} />
                       </a>
                     )}
                   </div>
                 </h3>
-                <p className="text-gray-400 text-sm mb-4">
+                <p className="text-gray-400 text-xs sm:text-sm mb-3 sm:mb-4">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1 sm:gap-2">
                   {project.technologies.map((tech, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 bg-gray-900 border border-gray-700 text-cyan-400 rounded-lg text-xs font-medium"
+                      className="px-2 sm:px-3 py-1 bg-gray-900 border border-gray-700 text-cyan-400 rounded-lg text-xs font-medium"
                     >
                       {tech}
                     </span>
@@ -193,30 +193,30 @@ export default function Projects() {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-14">
-          <p className="text-gray-400 mb-3">Want to explore more?</p>
+        <div className="text-center mt-10 sm:mt-14">
+          <p className="text-gray-400 mb-3 text-sm sm:text-base">Want to explore more?</p>
           <a
             href="https://github.com/Mariem0401"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 border border-gray-700 rounded-lg bg-gray-800 hover:border-cyan-500 hover:text-cyan-400 transition"
+            className="inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 border border-gray-700 rounded-lg bg-gray-800 hover:border-cyan-500 hover:text-cyan-400 transition text-sm sm:text-base"
           >
-            <Github size={18} />
+            <Github size={16} sm:size={18} />
             Visit my GitHub
-            <ExternalLink size={16} />
+            <ExternalLink size={14} sm:size={16} />
           </a>
         </div>
       </div>
 
       {/* Video Modal */}
       {selectedVideo && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm p-4">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm p-2 sm:p-4">
           <div className="relative w-full max-w-4xl">
             <button
               onClick={() => setSelectedVideo(null)}
-              className="absolute -top-12 right-0 p-2 text-white hover:text-cyan-400 transition-colors"
+              className="absolute -top-10 sm:-top-12 right-0 p-2 text-white hover:text-cyan-400 transition-colors"
             >
-              <X size={32} />
+              <X size={24} sm:size={32} />
             </button>
             <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-2xl">
               <video
