@@ -4,7 +4,17 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    try {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+    } catch (e) {
+      // Fallback for older browsers
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    }
   };
 
   return (
@@ -88,7 +98,7 @@ export default function Footer() {
       </div>
 
       {/* --- Divider + Copyright --- */}
-      <div className="relative max-w-6xl mx-auto mt-8 sm:mt-12 pt-4 sm:pt-6 border-t border-gray-800 text-center text-xs sm:text-sm text-gray-500">
+      <div className="relative max-w-6xl mx-auto mt-8 sm:mt-12 pt-8 sm:pt-12 border-t border-gray-800 text-center text-xs sm:text-sm text-gray-500">
         <p>
           © {currentYear} <span className="text-cyan-400 font-semibold">Mariem Guibene</span>.
           All rights reserved.
@@ -97,10 +107,11 @@ export default function Footer() {
         {/* Scroll to Top Button */}
         <button
           onClick={scrollToTop}
-          className="absolute right-4 sm:right-6 -top-6 sm:-top-8 p-2 rounded-full bg-cyan-600/20 hover:bg-cyan-600/40 transition-all text-cyan-400"
+          type="button"
+          className="absolute right-0 top-4 sm:top-6 p-2 sm:p-3 rounded-full bg-cyan-600 hover:bg-cyan-500 transition-all text-white hover:scale-110 shadow-lg"
           aria-label="Scroll to top"
         >
-          <ArrowUp size={14} sm:size={18} />
+          <ArrowUp size={16} sm:size={20} />
         </button>
       </div>
     </footer>

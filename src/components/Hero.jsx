@@ -13,14 +13,38 @@ export default function Hero() {
   };
 
   const techStack = [
-    { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
-    { name: "React Native", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
-    { name: "Spring Boot", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" },
-    { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" },
-    { name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" },
-    { name: "Docker", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" },
-    { name: "Angular", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg" },
-    { name: "TypeScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" },
+    {
+      name: "React",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+    },
+    {
+      name: "React Native",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+    },
+    {
+      name: "Spring Boot",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg",
+    },
+    {
+      name: "Node.js",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+    },
+    {
+      name: "MongoDB",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
+    },
+    {
+      name: "Docker",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
+    },
+    {
+      name: "Angular",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg",
+    },
+    {
+      name: "TypeScript",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+    },
   ];
 
   return (
@@ -36,26 +60,42 @@ export default function Hero() {
       <div className="absolute bottom-1/4 -right-48 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>
 
       <div className="max-w-5xl mx-auto text-center relative z-10">
-        {/* Badge */}
+        {/* Title with Avatar */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-6">
+          {/* Avatar */}
+          <div className="relative group">
+            <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56 rounded-full bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 p-2 shadow-xl group-hover:scale-105 transition-transform duration-300">
+              <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
+                <img
+                  src="/avatar/avatar.jpg"
+                  alt="Mariem Guibene"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            {/* Status indicator */}
+            <div className="absolute bottom-1 right-1 w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 bg-green-400 rounded-full border-2 border-gray-900 shadow-lg"></div>
+          </div>
 
-        {/* Title */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6">
-          <span className="text-gray-100">Hi, I'm </span>
-          <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent drop-shadow-lg">
-            Mariem Guibene
-          </span>
-        </h1>
+          {/* Name */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-center sm:text-left">
+            <span className="text-gray-100 block sm:inline">Hi, I'm </span>
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent drop-shadow-lg">
+              Mariem Guibene
+            </span>
+          </h1>
+        </div>
 
         {/* Subtitle */}
-        <div className="flex items-center justify-center gap-2 sm:gap-3 text-lg sm:text-xl md:text-2xl text-gray-400 mb-8">
-          <Terminal size={20} sm:size={24} md:size={26} className="text-cyan-400 flex-shrink-0" />
-          <span className="font-light text-sm sm:text-base md:text-lg">
+        <div className="flex items-center justify-center gap-3 text-xl sm:text-2xl text-gray-400 mb-8">
+          <Terminal size={26} className="text-cyan-400 flex-shrink-0" />
+          <span className="font-light">
             Software Engineer — Web & Mobile Developer
           </span>
         </div>
 
         {/* Description */}
-        <p className="text-sm sm:text-base md:text-lg text-gray-300 max-w-xs sm:max-w-md md:max-w-xl lg:max-w-2xl xl:max-w-3xl mx-auto mb-6 sm:mb-8 md:mb-10 leading-relaxed px-3 sm:px-4 md:px-2">
+        <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
           Software Engineer specialized in web and mobile development with
           hands-on experience across frontend, backend, and application
           architecture. Expert in{" "}
@@ -82,7 +122,9 @@ export default function Hero() {
                   loading="lazy"
                   className="h-5 w-auto sm:h-6 object-contain"
                 />
-                <span className="font-medium text-gray-200 text-xs sm:text-sm">{tech.name}</span>
+                <span className="font-medium text-gray-200 text-xs sm:text-sm">
+                  {tech.name}
+                </span>
               </div>
             ))}
           </div>
@@ -108,60 +150,60 @@ export default function Hero() {
         `}</style>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-8 sm:mb-12 px-4">
+        <div className="flex flex-wrap gap-4 justify-center items-center mb-12">
           <button
             onClick={scrollToProjects}
-            className="group w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold shadow-xl hover:shadow-2xl hover:shadow-cyan-500/60 transition-all transform hover:-translate-y-1.5 flex items-center justify-center gap-2 text-sm sm:text-base"
+            className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold shadow-xl hover:shadow-2xl hover:shadow-cyan-500/60 transition-all transform hover:-translate-y-1.5 flex items-center gap-2"
           >
             View My Work
             <ChevronDown
-              size={16} sm:size={20}
+              size={20}
               className="group-hover:translate-y-1 transition-transform duration-300"
             />
           </button>
           <a
             href="mailto:mariemguib@gmail.com"
-            className="w-full sm:w-auto px-4 sm:px-6 py-3 sm:py-4 bg-gray-800 border border-gray-700 text-gray-300 rounded-xl font-medium hover:border-cyan-500 hover:text-cyan-400 transition flex items-center justify-center gap-2 shadow-md hover:shadow-cyan-500/20 text-sm sm:text-base"
+            className="px-6 py-4 bg-gray-800 border border-gray-700 text-gray-300 rounded-xl font-medium hover:border-cyan-500 hover:text-cyan-400 transition flex items-center gap-2 shadow-md hover:shadow-cyan-500/20"
           >
-            <Mail size={16} sm:size={20} />
+            <Mail size={20} />
             Get In Touch
           </a>
           <a
             href="/resume/Mariem_Guibene_Resume.pdf"
             download
-            className="w-full sm:w-auto px-4 sm:px-6 py-3 sm:py-4 bg-gray-800 border border-gray-700 text-gray-300 rounded-xl font-medium hover:border-cyan-500 hover:text-cyan-400 transition flex items-center justify-center gap-2 shadow-md hover:shadow-cyan-500/20 text-sm sm:text-base"
+            className="px-6 py-4 bg-gray-800 border border-gray-700 text-gray-300 rounded-xl font-medium hover:border-cyan-500 hover:text-cyan-400 transition flex items-center gap-2 shadow-md hover:shadow-cyan-500/20"
           >
-            <Download size={16} sm:size={20} />
+            <Download size={20} />
             Resume
           </a>
         </div>
 
         {/* Social Links */}
-        <div className="flex justify-center gap-3 sm:gap-4">
+        <div className="flex justify-center gap-4">
           <a
             href="mailto:mariemguib@gmail.com"
             aria-label="Email"
-            className="p-2 sm:p-3 bg-gray-800 border border-gray-700 rounded-lg text-gray-400 hover:text-cyan-400 hover:border-cyan-500 transition duration-200"
+            className="p-3 bg-gray-800 border border-gray-700 rounded-lg text-gray-400 hover:text-cyan-400 hover:border-cyan-500 transition duration-200"
           >
-            <Mail size={16} sm:size={20} />
+            <Mail size={20} />
           </a>
           <a
             href="https://www.linkedin.com/in/mariem-guibene-8b039123a/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="p-2 sm:p-3 bg-gray-800 border border-gray-700 rounded-lg text-gray-400 hover:text-cyan-400 hover:border-cyan-500 transition duration-200"
+            className="p-3 bg-gray-800 border border-gray-700 rounded-lg text-gray-400 hover:text-cyan-400 hover:border-cyan-500 transition duration-200"
           >
-            <Linkedin size={16} sm:size={20} />
+            <Linkedin size={20} />
           </a>
           <a
             href="https://github.com/Mariem0401"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="p-2 sm:p-3 bg-gray-800 border border-gray-700 rounded-lg text-gray-400 hover:text-cyan-400 hover:border-cyan-500 transition duration-200"
+            className="p-3 bg-gray-800 border border-gray-700 rounded-lg text-gray-400 hover:text-cyan-400 hover:border-cyan-500 transition duration-200"
           >
-            <Github size={16} sm:size={20} />
+            <Github size={20} />
           </a>
         </div>
       </div>
