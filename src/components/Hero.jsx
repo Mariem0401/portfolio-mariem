@@ -55,7 +55,7 @@ export default function Hero() {
         </div>
 
         {/* Description */}
-        <p className="text-base sm:text-lg text-gray-300 max-w-2xl sm:max-w-3xl mx-auto mb-8 sm:mb-10 leading-relaxed px-2">
+        <p className="text-sm sm:text-base md:text-lg text-gray-300 max-w-xs sm:max-w-md md:max-w-xl lg:max-w-2xl xl:max-w-3xl mx-auto mb-6 sm:mb-8 md:mb-10 leading-relaxed px-3 sm:px-4 md:px-2">
           Software Engineer specialized in web and mobile development with
           hands-on experience across frontend, backend, and application
           architecture. Expert in{" "}
